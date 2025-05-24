@@ -11,5 +11,5 @@ Actor Attacker
 participant BotNet
 Attacker->>BotNet: 1. The attacker first assembles a botnet.
 create participant WebServer
-BotNet->>WebServer 2. Attacker launches the DDOS Attack
+BotNet->>WebServer: 2. Attacker launches the DDOS Attack.
 ```
