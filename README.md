@@ -14,19 +14,21 @@ DDoS_Attack_Sequence.md
 ```mermaid
 sequenceDiagram
 Actor Attacker
-Actor General User
+Actor GeneralUser
 participant BotNet
 participant WebServer
 participant Firewall
+
+box Orange Without Security
 Attacker->>BotNet: 1. The attacker first assembles a botnet.
 BotNet->>WebServer: 2. Attacker launches the DDOS Attack with their BotNet, without the right security, the Web Server will become unresponsive.
-General User--xWebServer: 3. Unable to access the Web Services, due to the DDOS attack.
+GeneralUser--xWebServer: 3. Unable to access the Web Services, due to the DDOS attack.
 end 
 
-box With Security
+box white With Security
 Attacker->>BotNet: 1. The attacker first assembles a botnet.
-BotNet-xfirewall: 2. Attacker launches the DDOS Attack with their BotNet, but due to the right security, the attack is stopped. 
-General User-->>firewall: 3. The user's network traffic is analyze to be legit, and the firewall allows it through.
-Firewall-->>webserver: 4. The User's traffic is allowed. 
+BotNet-xFirewall: 2. Attacker launches the DDOS Attack with their BotNet, but due to the right security, the attack is stopped. 
+GeneralUser-->>Firewall: 3. The user's network traffic is analyze to be legit, and the firewall allows it through.
+Firewall-->>WebServer: 4. The User's traffic is allowed. 
 end
 ```
