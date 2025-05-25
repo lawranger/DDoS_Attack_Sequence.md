@@ -7,7 +7,7 @@ DDoS_Attack_Sequence.md
 #####	3.Detecting and stopping a DDoS attack can be challenging, especially since high traffic isn’t always suspicious—businesses often want more visitors. In many cases, the first step in mitigation may be to temporarily take the server offline to assess and respond to the threat.
 ######	However, several proactive security measures can help:
 	* Firewall Configuration: Firewalls can be set to block known malicious IP ranges and filter out traffic on unused or suspicious ports.
-	*Intelligent Firewalls: Advanced firewalls like Cisco’s Adaptive Security Appliance (ASA) can leverage AI and behavioral analysis to detect and stop DDoS attacks in real-time by analyzing incoming traffic patterns and identifying botnet behavior.
+	* Intelligent Firewalls: Advanced firewalls like Cisco’s Adaptive Security Appliance (ASA) can leverage AI and behavioral analysis to detect and stop DDoS attacks in real-time by analyzing incoming traffic patterns and identifying botnet behavior.
 
 
 
@@ -25,12 +25,12 @@ End
 box With Security
 Actor Attacker
 Actor General User
-participant BotNet
+participant BotNet 
 Attacker->>BotNet: 1. The attacker first assembles a botnet.
 create participant firewall
 create participant Webserver
 BotNet-xfirewall: 2. Attacker launches the DDOS Attack with their BotNet, but due to the right security, the attack is stopped. 
 General User-->>firewall: 3. The user's network traffic is analyze to be legit, and the firewall allows it through.
 Firewall-->>webserver:
- 
+End 
 ```
