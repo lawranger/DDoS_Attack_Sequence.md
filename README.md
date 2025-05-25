@@ -17,7 +17,7 @@ box Orange Without security
 Actor Attacker
 Actor General user
 participant BotNet
-Attacker->>BotNet: 1. The attacker first assembles a botnet.
+Actor Attacker->>BotNet: 1. The attacker first assembles a botnet.
 create participant WebServer
 BotNet->>WebServer: 2. Attacker launches the DDOS Attack with their BotNet, without the right security, the Web Server will become unresponsive.
 General user--xWebServer: 3. Unable to access the Web Services, due to the DDOS attack.
