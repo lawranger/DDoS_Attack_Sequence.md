@@ -36,5 +36,5 @@ Attacker->>BotNet: 1. The attacker first assembles a botnet.
 BotNet-xFirewall: 2. Attacker launches the DDOS Attack with their BotNet.
 GeneralUser-->>Firewall: 3. The user's network traffic is analyze to be legit.
 Firewall-->>WebServer: 4. The User's traffic is allowed.
-WebServer-->>GeneralUser:
+WebServer-->>GeneralUser: 
 ```
