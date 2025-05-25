@@ -21,16 +21,5 @@ Attacker->>BotNet: 1. The attacker first assembles a botnet.
 create participant WebServer
 BotNet->>WebServer: 2. Attacker launches the DDOS Attack with their BotNet, without the right security, the Web Server will become unresponsive.
 General user--xWebServer: 3. Unable to access the Web Services, due to the DDOS attack.
-End
-box With Security
-Actor Attacker
-Actor General User
-participant BotNet 
-Attacker->>BotNet: 1. The attacker first assembles a botnet.
-create participant firewall
-create participant Webserver
-BotNet-xfirewall: 2. Attacker launches the DDOS Attack with their BotNet, but due to the right security, the attack is stopped. 
-General User-->>firewall: 3. The user's network traffic is analyze to be legit, and the firewall allows it through.
-Firewall-->>webserver:
 End 
 ```
