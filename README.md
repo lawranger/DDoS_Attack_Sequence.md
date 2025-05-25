@@ -19,7 +19,8 @@ participant BotNet
 participant WebServer
 
 Attacker->>BotNet: 1. The attacker first assembles a botnet.
-BotNet->>WebServer: 2. Attacker launches the DDOS Attack with their BotNet, without the right security, the Web Server will become unresponsive.
+BotNet->>WebServer: 2. Attacker launches the DDOS Attack with their BotNet.
+Note right of WebServer: Becomes Unresponsive.
 GeneralUser--xWebServer: 3. Unable to access the Web Services, due to the DDOS attack.
 ```
 
@@ -32,7 +33,7 @@ participant Firewall
 participant WebServer
 
 Attacker->>BotNet: 1. The attacker first assembles a botnet.
-BotNet-xFirewall: 2. Attacker launches the DDOS Attack with their BotNet, but due to the right security, the attack is stopped. 
-GeneralUser-->>Firewall: 3. The user's network traffic is analyze to be legit, and the firewall allows it through.
+BotNet-xFirewall: 2. Attacker launches the DDOS Attack with their BotNet.
+GeneralUser-->>Firewall: 3. The user's network traffic is analyze to be legit.
 Firewall-->>WebServer: 4. The User's traffic is allowed. 
 ```
